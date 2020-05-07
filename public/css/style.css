@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Fondamento&display=swap');
+body {
+    margin: 0;
+}
+
+.l-heading {
+    color: #420000;
+    font-size: 2.2rem;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.m-heading {
+    color: #a72693;
+    font-family: 'Acme', sans-serif;
+    font-size: 1.85rem;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.container .items:first-child{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 80vw;
+    height: 70vh;
+    margin: 0.75rem;
+    justify-content: space-evenly;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px #1a1a1b;
+}
+.container .showcase .heading {
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    background-color: #eee;
+}
+.container .showcase .heading h1 {
+    text-transform: uppercase;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #464159;
+    font-size: 2.2rem;
+
+}
+.container .showcase .heading h1 span {
+    text-transform: uppercase;
+    font-family: 'Acme', sans-serif;
+    color: #6c7b95;
+    font-size: 2.2rem;
+    text-decoration: underline;
+}
+.container .items .content {
+    display: flex;
+    justify-content: space-evenly;
+}
+.container .items .content .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+    padding: 2rem 2rem;
+    margin: 1rem 1rem;
+}
+.container .items .content .text {
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    justify-content: space-between;
+}
+.container .items .content .text .text-1:first-child {
+    background: red;
+    padding: 0rem 3rem;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px #1a1a1b;
+}
+.container .items .content .confirmed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #efce9c;
+    color: #333;
+    border-radius: 10px;
+}
+.container .items .content .recovered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(203, 236, 153);
+    color: #333;
+    border-radius: 10px;
+    
+}
+.container .items .content .death {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(248, 142, 142);
+    color: #333;
+    border-radius: 10px;
+}
+.container .table {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .table .item {
+    margin: 0.55rem 0;
+}
+
+.container .table .header {
+    width: 100%;
+    background: rgb(242, 231, 231);
+    display: flex;
+    justify-content: space-evenly;
+}
+.container .table .header .input {
+    display: flex;
+}
+.container .table .header .input i {
+    position: absolute;
+}
+.container .table .header .input .icon {
+    padding: 10px;
+    min-width: 40px;
+    align-self: center;
+    color: #333;
+}
+.container .table .header .input input {
+    border: 2px solid #420000;
+    border-radius: 5px;
+    text-align: center;
+    height: 40%;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.8rem;
+    padding: 0.5rem 0.5rem;
+    color: #420000;
+    font-weight: bold;
+    position: relative;
+    top: 22%;
+    
+}
+.container .table .header .heading{
+    text-transform: uppercase;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #464159;
+    font-size: 2.2rem;
+    border: 2px solid #6c7b95;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px #1a1a1b;
+}
+.container .table .header .heading span {
+    text-transform: uppercase;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #6c7b95;
+    font-size: 2.2rem;
+}
+
+.container .table table {
+    width: 100%;
+    border: 2px solid #333;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #eee;
+}
+.container .table table th, td {
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+    padding: 8px;
+    text-transform: uppercase;
+
+}
+.container .table table tr:nth-child(even) {
+    background-color: #b4b1b1;
+}
+.container .table table th {
+    background-color: #efce9c;
+    color: #464159;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 10px;
+}
+
+
+
+@media(max-width: 500px) {
+    .l-heading {
+        font-size: 3rem;
+    }
+    .m-heading {
+        font-size: 3.9rem;
+    }
+
+    .container {
+        width: 730px;
+        height: 12336.800px;
+    }
+    .container .showcase .heading {
+        width: 100%;
+    }
+    .container .showcase .heading .icon-1,
+    .container .showcase .heading .icon-2 {
+        align-self: center;
+    }
+    .container .showcase .heading h1 {
+        font-size: 3.5rem;
+    }
+    .container .showcase .heading h1 span {
+        font-size: 3rem;
+    }
+    .container .items:first-child {
+        flex-direction: row;
+        width: 650px;
+        height: 2000px;
+    }
+    .container .items .content {
+        flex-direction: column;
+        flex: auto;
+        font-size: 1.5rem;
+    }
+    .container .table .header {
+        flex-direction: column;
+    }
+
+    .container .table .header .input {
+        justify-content: center;
+    }
+    .container .table .header .input .icon {
+        position: relative;
+        top: 15%;
+    }
+}
+
+@media(max-height: 500px) {
+    .l-heading {
+        font-size: 3rem;
+    }
+    .m-heading {
+        font-size: 3.9rem;
+    }
+
+    .container {
+        width: 850px;
+        height: 12336.800px;
+    }
+    .container .showcase .heading {
+        width: 100%;
+    }
+    .container .showcase .heading .icon-1,
+    .container .showcase .heading .icon-2 {
+        align-self: center;
+    }
+    .container .showcase .heading h1 {
+        font-size: 3.5rem;
+    }
+    .container .showcase .heading h1 span {
+        font-size: 3rem;
+    }
+    .container .items:first-child {
+        flex-direction: row;
+        width: 650px;
+        height: 2000px;
+    }
+    .container .items .content {
+        flex-direction: column;
+        flex: auto;
+        font-size: 1.5rem;
+    }
+    .container .table .header {
+        flex-direction: column;
+    }
+
+    .container .table .header .input {
+        justify-content: center;
+    }
+    .container .table .header .input .icon {
+        position: relative;
+        top: 15%;
+    }
+}
