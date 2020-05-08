@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-var Request = require("request");
+const fetch = require('node-fetch-npm');
+const Request = require("request");
 
 const app = express();
 
@@ -12,19 +13,28 @@ app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.get("/", function(req,res) {
-        
-        Request("https://api.covid19api.com/summary", function (error, response, body) {
-        
-            const data = JSON.parse(body);
-            const globalData = data.Global;
-            const countries = data.Countries;
-            res.render("index", {
-                GlobalData: globalData,
-                Countries: countries
-            });
-        });
+var countriesRequest = fetch('https://corona.lmao.ninja/v2/countries').then(function(response){ 
+    return response.json()
 });
+var globalRequest = fetch('https://corona.lmao.ninja/v2/all').then(function(response){
+    return response.json()
+});
+
+var combinedData = {"countriesRequest":{},"globalRequest":{}};
+Promise.all([countriesRequest,globalRequest]).then(function(values){
+    combinedData["countriesRequest"] = values[0];
+    combinedData["globalRequest"] = values[1];
+    return combinedData;
+    
+});
+
+app.get("/", function(req,res) {
+    res.render("base", {
+      AllData: combinedData
+    });
+});
+
+
 let port = process.env.PORT;
 if(port == null || port == "") {
   port = 3000;

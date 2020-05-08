@@ -3,6 +3,10 @@
 body {
     margin: 0;
 }
+img {
+    width: 10%;
+    height: 20%;
+}
 
 .l-heading {
     color: #420000;
@@ -154,9 +158,10 @@ body {
 }
 .container .table .header .heading{
     text-transform: uppercase;
+    text-align: center;
     font-family: 'Noto Sans TC', sans-serif;
     color: #464159;
-    font-size: 2.2rem;
+    font-size: 20px;
     border: 2px solid #6c7b95;
     border-radius: 5px;
     padding: 0.5rem 1rem;
@@ -178,7 +183,7 @@ body {
     background-color: #eee;
 }
 .container .table table th, td {
-    text-align: center;
+    text-align: justify;
     font-family: 'Noto Sans TC', sans-serif;
     padding: 8px;
     text-transform: uppercase;
@@ -193,10 +198,34 @@ body {
     font-family: 'Noto Sans TC', sans-serif;
     font-family: 10px;
 }
-
-
-
+/* Ipad pro */
+@media (max-width: 1024px){
+    .container {
+        width: 1500px;
+        height: 38585.600px;
+    }
+    .container .items:first-child {
+        width: 120vw;
+        height: 50vh;
+    }
+}
+/* Ipad */
+@media (max-width: 768px){
+    .container {
+        width: 1500px;
+        height: 38585.600px;
+    }
+    .container .items:first-child {
+        width: 170vw;
+        height: 70vh;
+    }
+}
+/* Smart phone */
 @media(max-width: 500px) {
+    img {
+        width: 40%;
+        height: 20%;
+    }
     .l-heading {
         font-size: 3rem;
     }
@@ -243,51 +272,17 @@ body {
         top: 15%;
     }
 }
-
+/* Smart phone landscape */
 @media(max-height: 500px) {
-    .l-heading {
-        font-size: 3rem;
-    }
-    .m-heading {
-        font-size: 3.9rem;
-    }
-
     .container {
-        width: 850px;
-        height: 12336.800px;
-    }
-    .container .showcase .heading {
-        width: 100%;
-    }
-    .container .showcase .heading .icon-1,
-    .container .showcase .heading .icon-2 {
-        align-self: center;
-    }
-    .container .showcase .heading h1 {
-        font-size: 3.5rem;
-    }
-    .container .showcase .heading h1 span {
-        font-size: 3rem;
+        width: 1500px;
+        height: 38585.600px;
     }
     .container .items:first-child {
-        flex-direction: row;
-        width: 650px;
-        height: 2000px;
-    }
-    .container .items .content {
-        flex-direction: column;
-        flex: auto;
-        font-size: 1.5rem;
-    }
-    .container .table .header {
-        flex-direction: column;
-    }
-
-    .container .table .header .input {
-        justify-content: center;
-    }
-    .container .table .header .input .icon {
-        position: relative;
-        top: 15%;
+        width: 170vw;
+        height: 150vh;
     }
 }
+
+
+

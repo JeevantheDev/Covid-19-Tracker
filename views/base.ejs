@@ -17,17 +17,17 @@
                 </div>
                 <div class="item confirmed">
                     <h1 class="l-heading">Confirmed</h1>
-                    <h2 class="m-heading"><%= GlobalData.TotalConfirmed %></h2>
+                    <h2 class="m-heading"><%= AllData.globalRequest.cases %> </h2>
                     <i class="far fa-check-circle fa-2x faa-bounce animated"></i>
                 </div>
                 <div class="item recovered">
                     <h1 class="l-heading">Recovered</h1>
-                    <h2 class="m-heading"><%= GlobalData.TotalRecovered %></h2>
+                    <h2 class="m-heading"><%= AllData.globalRequest.recovered %></h2>
                     <i class="fas fa-hand-holding-medical fa-2x faa-pulse animated faa-fast"></i>
                 </div>
                 <div class="item death">
                     <h1 class="l-heading">Deaths</h1>
-                    <h2 class="m-heading"><%= GlobalData.TotalDeaths %></h2>
+                    <h2 class="m-heading"><%= AllData.globalRequest.deaths %></h2>
                     <i class="fas fa-skull-crossbones fa-2x faa-shake animated"></i>
                 </div>
            </div>
@@ -39,30 +39,31 @@
                     <i class="fas fa-search fa-3x faa-horizontal animated icon"></i>
                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Countries.." title="Type in a name">
                 </div>
-                <h1 class="item-1 heading">Last Updated: <span><%= Countries[0].Date %></span></h1>
+                <h1 class="item-1 heading">Last Updated: <%= new Date(AllData.globalRequest.updated) %> <span></span></h1>
             </div>
             <table style="margin-top: 0;" id="myTable" class="item">
                 <tr>
                     <th>Country</th>
-                    <th>New Confirmed</th>
-                    <th>Total Confirmed</th>
-                    <th>New Recovered</th>
-                    <th>Total Recovered</th>
-                    <th>New Deaths</th>
+                    <th>Total Cases</th>
+                    <th>Today Cases</th>
                     <th>Total Deaths</th>
+                    <th>Today Deaths</th>
+                    <th>Total Recovered</th>
+                    <th>Critical</th>
+                    <th>Last Updated</th>
                 </tr>
-                <% Countries.forEach(function(data) { %>
+                <% AllData.countriesRequest.forEach(data => { %>
                     <tr>
-                        <td><%= data.Country %></td>
-                        <td><%= data.NewConfirmed %></td>
-                        <td><%= data.TotalConfirmed %></td>
-                        <td><%= data.NewRecovered %></td>
-                        <td><%= data.TotalRecovered %></td>
-                        <td><%= data.NewDeaths %></td>
-                        <td><%= data.TotalDeaths %></td>
+                        <td><img src="<%= data.countryInfo.flag %>"> <%= data.country %></td>
+                        <td><%= data.cases %></td>
+                        <td><%= data.todayCases %></td>
+                        <td><%= data.deaths %></td>
+                        <td><%= data.todayDeaths %></td>
+                        <td><%= data.recovered %></td>
+                        <td><%= data.critical %></td>
+                        <td><%= new Date(data.updated) %></td>
                     </tr> 
-                <% }) %> 
-    
+                <% }) %>
             </table>
         </div>
 </div>
