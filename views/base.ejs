@@ -50,7 +50,6 @@
                     <th>Today Deaths</th>
                     <th>Total Recovered</th>
                     <th>Critical</th>
-                    <th>Last Updated</th>
                 </tr>
                 <% AllData.countriesRequest.forEach(data => { %>
                     <tr>
@@ -61,7 +60,6 @@
                         <td><%= data.todayDeaths %></td>
                         <td><%= data.recovered %></td>
                         <td><%= data.critical %></td>
-                        <td><%= new Date(data.updated) %></td>
                     </tr> 
                 <% }) %>
             </table>
