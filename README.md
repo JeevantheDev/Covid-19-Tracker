@@ -6,7 +6,3 @@ First- npm install
 Second- node app.js 
 
 to run the webapp locally.
-
-
-
-Responsiveness of the website only for smartphones.
