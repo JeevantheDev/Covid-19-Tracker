@@ -224,7 +224,7 @@ img {
 @media(max-width: 500px) {
     img {
         width: 40%;
-        height: 20%;
+        height: 30%;
     }
     .l-heading {
         font-size: 3rem;
