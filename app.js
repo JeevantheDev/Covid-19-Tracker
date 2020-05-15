@@ -28,9 +28,7 @@ Promise.all([countriesRequest,globalRequest]).then(function(values){
     
 });
 
-app.get("/", function(req,res) {
-    // console.log(typeof(combinedData.countriesRequest));    
-    console.log(Object.keys(combinedData.countriesRequest));    
+app.get("/", function(req,res) {   
     res.render("base", {
       AllData: combinedData
     });
